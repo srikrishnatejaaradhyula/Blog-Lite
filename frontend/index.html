@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,600&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+      header {
+        background-color: rgba(240, 248, 255, 0.162);
+        /* color: black; */
+      }
+      body {
+        background-image: linear-gradient(-20deg, #e8d8ffea 0%, #fafbd2ea 100%);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        font-family: "Roboto", sans-serif;
+        font-family: "Roboto Serif", serif;
+        color: black;
+      }
+      .dark-mode {
+        background-color: rgb(26, 26, 43);
+        color: rgb(255, 252, 227);
+        background-image: linear-gradient(-20deg,#341841ea  0%,#261c42ea 100%);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+      }
+      .darklink {
+        color: rgb(255, 252, 227);
+      }
+      .dark {
+        position: absolute;
+        right: 0px;
+        top: 10vh;
+        z-index: 9;
+        border-radius: 100px 0px 0px 100px;
+        height: 30px;
+        border: 1;
+        border-color: black;
+        background-color: rgb(109, 92, 135);
+      }
+    </style>
+    <title>Vite App</title>
+
+    <script>
+      function ChangeTheme() {
+        var element = document.body;
+       
+        var icon = document.getElementById("icondark");
+        element.classList.toggle("dark-mode");
+        icon.classList.toggle("bi-moon-fill");
+        
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="ChangeTheme()" class="dtn dark" id="darkbutt">
+      <i id="icondark" class="bi bi-brightness-high-fill " style="color:rgb(255, 252, 227)"></i> 
+    </button>
+
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
